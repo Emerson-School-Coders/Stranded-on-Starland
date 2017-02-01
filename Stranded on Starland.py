@@ -125,7 +125,7 @@ def jungle():
                         if sword == "loot":
                            print("You loot the chest and hey! A sword! Could be helpful later.")
                            time.sleep(3)
-                           print("You head back to the fork in the road because there is no more things to do on the left path.")
+                           print("You head back to the fork in the path because there is no more things to do on the left path.")
                            time.sleep(2)
                            print("You head down the right path and it looks way longer than the left.")
                            time.sleep(5)
@@ -143,7 +143,16 @@ def jungle():
                            time.sleep(2)
                            print("Andrew says you should head back imediately. So you go as fast as you can.")
                            time.sleep(3)
-                           
+                           print("Once you return to the ship you hand Andrew the power gem.")
+                           time.sleep(3)
+                           print("He explains that this is the Engine Gem and that it is one of the more important power gems.")
+                           time.sleep(2)
+                           print("A new area has appeared on your map!")
+                           time.sleep(3)
+                           print("Ok " +name+ "head out as soon as you can after you get some sleep.")
+                           Snow()
+
+
                            if sword == "turnback":
                                print("It was probably a trap anyway.")
                                time.sleep(3)
@@ -155,7 +164,7 @@ def jungle():
                                time.sleep(3)
                                print("You pick up and it is Andrew on the line and he says that you are getting close to the Gem.")
                                time.sleep(2)
-                               print("You hear a creepy growl from the bushes")
+                               print("You hear a creepy growl from the bushes.")
                                time.sleep(2)
                                print("As you aproach the bushes huge spider comes out and approaches you.")
                                time.sleep(2)
@@ -168,5 +177,74 @@ def jungle():
                                print("The game will automatically start from where you were.")
                                time.sleep(2)
                                alive = 0
-                               jungle()             
+                               jungle()
+
+def snow()
+    print("You have entered the Snow Area!")
+    time.sleep(2)
+    print("Its exremely cold here! Get some protection soon!")
+    time.sleep(3)
+    print("When you enter you see a huge igloo.")
+    igloo = ""
+    while igloo!="enter" and igloo!="ignore:
+        igloo = input("enter/ignore: ")
+        
+        if igloo = "ignore":
+            print("You make it a bit but die of frostbite.")
+            time.sleep(3)
+            print("Game Over.")
+            time.sleep(3)
+            print("The game will automatically start from where you were.")
+            time.sleep(3)
+            alive = 0
+            snow()
+            
+        if igloo == "enter":
+            print("You enter the igloo to see a... bar full of polar bears?")
+            time.sleep(2)
+            print("You are greeted by one of the bears and you tell him your ship crashed and you are trying to repair your ship.")
+            time.sleep(3)
+            print("He gives you a fur coat to pretect yourself in the cold! Could come handy later.")
+            time.sleep(2)
+            print("When you start walking down the path and not freezing you meet a strange penguin.")
+            time.sleep(3)
+            print("He tells you you need to find a cave and he saw some one take a mysterious gem.")
+            time.sleep(2)
+            print("When you continue walking you see a cave with somehing glowing inside.")
+            cave = ""
+            while cave!="enter" and cave!="keepwalking":
+                cave = input("enter/keepwalking: ")
+
+                if cave == "keepwalking":
+                    print("You make it a bi but a snowleopard smells the pelt and kills you")
+                    time.sleep(3)
+                    print("Game Over.")
+                    time.sleep(3)
+                    print("The game will automatically start from where you were.")
+                    time.sleep(3)
+                    alive = 0
+                    snow()
+                    
+                if cave == "enter":
+                    print("You enter the cave and see an old man sitting in a chair holding something.")
+                    time.sleep(3)
+                    print("He sees you have come in without asking.")
+                    time.sleep(2)
+                    print("He turns out to be a nice friendly guy who lets you have some food. You ask him if he has seen anythin and he says that he has heard nothing")
+                    time.sleep(4)
+                    print("When you leave he tells you directions to the right cave you follow his directions and he leads you right to it.")
+                    time.sleep(3)
+                    print("You hear dripping noises from the cave you turn around the corner and... its an evil snowman? tanning? SO MANY PLOT TWISTS.")
+                    time.sleep(3)
+                    print("He pulls out his shurikins and starts to run at you. NEVER INTERUPT A SNOWMAN TANNING... super awkward.")
+                    time.sleep(3)
+                    print("You pull out your sword and don't know what to do.")
+                    snowman = ""
+                    while snowman!="fight" and snowman!="run":
+                        snowman = input("fight/run: ")
+                        
+                        
+                    
+    
+    
 start()
