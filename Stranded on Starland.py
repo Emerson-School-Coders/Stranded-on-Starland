@@ -1,6 +1,5 @@
 import time
 global name
-global sword
 
 def start():
     alive = 1
@@ -65,10 +64,32 @@ def jungle():
         fork = ""
         while fork!="right" and fork!="left":
             fork = input("left/right: ")
+            if fork == "right":
+                            print ("You head down the right path.")
+                            time.sleep(5)
+                            print("You have been walking for quite awhile when you get another call.")
+                            time.sleep(3)
+                            print("You pick up and it is Andrew on the line and he says that you are getting close to the Gem.")
+                            time.sleep(2)
+                            print("You hear a creepy growl from the bushes")
+                            time.sleep(2)
+                            print("As you aproach the bushes huge spider comes out and approaches you.")
+                            time.sleep(2)
+                            print("You don't have anything to defend yourself with.")
+                            time.sleep(3)
+                            print("The huge spider slays you.")
+                            time.sleep(3)
+                            print("Game Over.")
+                            time.sleep(3)
+                            print("The game will automatically start from where you were.")
+                            time.sleep(2)
+                            alive = 0
+                            jungle()
+                            
             if fork == "left":
                 print("You walk down the left path and find a huge treehouse!")
                 time.sleep(3)
-                print("A little boy runs out of the treehouse and takes you inside, he says its to dengerous aroud here and you should head back")
+                print("A little boy runs out of the treehouse and takes you inside, he says its to dangerous aroud here and you should head back")
                 time.sleep(5)
                 print("You explain your ship crashed and that you had to come here to get the next power gem.")
                 time.sleep(3)
@@ -121,7 +142,8 @@ def jungle():
                            print("You slay the beast and he drops the second power gem.")
                            time.sleep(2)
                            print("Andrew says you should head back imediately. So you go as fast as you can.")
-
+                           time.sleep(3)
+                           
                            if sword == "turnback":
                                print("It was probably a trap anyway.")
                                time.sleep(3)
@@ -146,30 +168,5 @@ def jungle():
                                print("The game will automatically start from where you were.")
                                time.sleep(2)
                                alive = 0
-                               jungle()
-                           
-
-                        if fork == "right":
-                            print ("You head down the right path.")
-                            time.sleep(5)
-                            print("You have been walking for quite awhile when you get another call.")
-                            time.sleep(3)
-                            print("You pick up and it is Andrew on the line and he says that you are getting close to the Gem.")
-                            time.sleep(2)
-                            print("You hear a creepy growl from the bushes")
-                            time.sleep(2)
-                            print("As you aproach the bushes huge spider comes out and approaches you.")
-                            time.sleep(2)
-                            print("You don't have anything to defend yourself with.")
-                            time.sleep(3)
-                            print("The huge spider slays you.")
-                            time.sleep(3)
-                            print("Game Over.")
-                            time.sleep(3)
-                            print("The game will automatically start from where you were.")
-                            time.sleep(2)
-                            alive = 0
-                            jungle()
-                            
-                        
+                               jungle()             
 start()
