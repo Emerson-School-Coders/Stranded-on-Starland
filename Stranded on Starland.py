@@ -4,7 +4,7 @@ global name
 def start():
     alive = 1
     print("Hello! to start this game we need to know your name.")
-    time.sleep(3)
+    time.sleep(1)
     name = input("What's your name?")
     print("Alright "+name+" have a good time!")
     time.sleep(3)
@@ -45,7 +45,7 @@ def start():
         time.sleep(3)
         print("You decide to search the control room for any power gems...")
         time.sleep(6)
-        print("Hey!! You find the Fixer Gem! This gem makes the ship indestructible but it only works when you are in orbit.")
+        print("Hey!! You find the FIXER GEM! This gem makes the ship indestructible but it only works when you are in orbit.")
         time.sleep(2)
         print("but it was also designed to fix the ship if it ever crashed.")
         time.sleep(2)
@@ -58,7 +58,7 @@ def start():
         jungle()
 
 def jungle():
-        print("You have entered the Junge Area!") 
+        print("You have entered the Jungle Area!") 
         time.sleep(2)
         print("You are walking down the path when there is a fork in the road, go right or go left.")
         fork = ""
@@ -141,16 +141,16 @@ def jungle():
                            time.sleep(2)
                            print("You slay the beast and he drops the second power gem.")
                            time.sleep(2)
+                           print("Its the ENGINE GEM!")
+                           time.sleep(2)
                            print("Andrew says you should head back imediately. So you go as fast as you can.")
                            time.sleep(3)
                            print("Once you return to the ship you hand Andrew the power gem.")
                            time.sleep(3)
-                           print("He explains that this is the Engine Gem and that it is one of the more important power gems.")
-                           time.sleep(2)
                            print("A new area has appeared on your map!")
                            time.sleep(3)
-                           print("Ok " +name+ "head out as soon as you can after you get some sleep.")
-                           Snow()
+                           print("Okay, head out as soon as you can after you get some sleep.")
+                           snow()
 
 
                            if sword == "turnback":
@@ -179,17 +179,17 @@ def jungle():
                                alive = 0
                                jungle()
 
-def snow()
+def snow():
     print("You have entered the Snow Area!")
     time.sleep(2)
     print("Its exremely cold here! Get some protection soon!")
     time.sleep(3)
     print("When you enter you see a huge igloo.")
     igloo = ""
-    while igloo!="enter" and igloo!="ignore:
+    while igloo!="enter" and igloo!="ignore":
         igloo = input("enter/ignore: ")
         
-        if igloo = "ignore":
+        if igloo == "ignore":
             print("You make it a bit but die of frostbite.")
             time.sleep(3)
             print("Game Over.")
@@ -216,7 +216,7 @@ def snow()
                 cave = input("enter/keepwalking: ")
 
                 if cave == "keepwalking":
-                    print("You make it a bi but a snowleopard smells the pelt and kills you")
+                    print("You make it awhile but a snowleopard smells the pelt and kills you")
                     time.sleep(3)
                     print("Game Over.")
                     time.sleep(3)
@@ -242,9 +242,163 @@ def snow()
                     snowman = ""
                     while snowman!="fight" and snowman!="run":
                         snowman = input("fight/run: ")
-                        
-                        
+
+                        if snowman == "run":
+                            print("You manage to get out of the cave but his guards catch you and kill you.")
+                            time.sleep(3)
+                            print("Game Over.")
+                            time.sleep(3)
+                            print("The game will automatically start from where you were.")
+                            time.sleep(3)
+                            alive = 0
+                            snow()
+
+                        if snowman == "fight":
+                            print("Its a long fight but eventually he runs out of shurikins and you charge him.")
+                            time.sleep(3)
+                            print("He runs away and drops the next gem!")
+                            time.sleep(2)
+                            print("Its the WING GEM!")
+                            time.sleep(2)
+                            print("Andrew calls, and wants you back as soon as you can.")
+                            time.sleep(3)
+                            print("He puts it back into the control panel.")
+                            time.sleep(3)
+                            print("A new area has appeared on your map!")
+                            time.sleep(3)
+                            print("Okay, head out as soon as you can after you get some sleep.")
+                            swamp()
+                            
+def swamp():
+    print("Welcome to the Swamp Area!")
+    time.sleep(3)
+    print("You walk through the mushy brush and keep walking down the beaten path.")
+    time.sleep(3)
+    print("You see an alligator in the water.")
+    alligator = ""
+    while alligator!="fight" and alligator!="run":
+        alligator = input("fight/run: ")
+
+    if alligator == "fight":
+        print("You walk up to the creature he turns aroud and grabs your leg.")
+        time.sleep(2)
+        print("You make it away but the pain is to excruciating and you faint.")
+        time.sleep(3)
+        print("A man finds you and he knows magic.")
+        time.sleep(2)
+        print("He heals your leg, what a nice guy!")
+        time.sleep(2)
+        print("When he takes you back to his hut you see a cage in the back")
+        time.sleep(2)
+        print("Very suspicious.")
+        cage = ""
+        while cage!="check" and cage!="dont" and cage!="don't":
+            cage = input("check/dont: ")
+
+            if cage == "check":
+                print("I mean he is a very suspicious man!")
+                time.sleep(3)
+                print("He finds you as you turn around he cast a spell on you.")
+                time.sleep(2)
+                print("Game Over.")
+                time.sleep(3)
+                print("The game will automatically start from where you were.")
+                time.sleep(3)
+                alive = 0
+                swamp()
+
+                if cage == "dont" and "don't":
+                    print("Yeah he probably was suspicous but don't ruin his privacy")
+                    time.sleep(2)
+                    print("He takes you inside and gives you some soup...")
+                    time.sleep(2)
+                    print("But it was a trick! The soup was poison!")
+                    time.sleep(2)
+                    print("Game Over.")
+                    time.sleep(3)
+                    print("The game will automatically start from where you were.")
+                    time.sleep(3)
+                    alive = 0
+                    swamp()
+
+    if alligator == "run":
+        print("Good idea, alligators are strong.")
+        time.sleep(2)
+        print("You continue to walk when a little frog is in your way")
+        time.sleep(2)
+        print("He says that to pass you have to answer the riddle.")
+        time.sleep(2)
+        print("If you say my name I will no longer exist")
+        riddle = ""
+        while riddle!="silence":
+            riddle = input("What is the answer?")
+
+            if riddle == "silence":
+                    print("Wow! I didnt expect for you to get that right! Good job!")
+                    time.sleep(2)
+                    print("Just dont tell my boss! and if you're looking for the gem, he wont just give it that easily!")
+                    time.sleep(3)
+                    print("You continue to walk and see a castle.")
+                    time.sleep(2)
+                    print("You see a very hefty man inside and go to ask about the gem.")
+                    time.sleep(3)
+                    print("He says he has it but can only give it to you if you accept the duel")
+                    deul = ""
+                    while deul!="yes" and deul!="no":
+                        deul = input("yes/no: ")
+
+                        if deul == "no":
+                                print("Ok then, I geuss I will take you to the dungeon until you are ready!")
+                                time.sleep(3)
+                                print("Game Over.")
+                                time.sleep(3)
+                                print("The game will automatically start from where you were.")
+                                time.sleep(3)
+                                alive = 0
+                                swamp()
+
+                        if deul == "yes":
+                                print("You must be a fool, no one can beat the might KING!")
+                                time.sleep(2)
+                                print("You pull out you sword and are ready to destroy the king.")
+                                time.sleep(3)
+                                print("He charges you.")
+                                king = ""
+                                while king!="block" and king!="dodge":
+                                    king = input("block/dodge: ")
+
+                        if king == "block":
+                                print("You block one attack but are no match for his others")
+                                time.sleep(3)
+                                print("Game Over.")
+                                time.sleep(3)
+                                print("The game will automatically start from where you were.")
+                                time.sleep(3)
+                                alive = 0
+                                swamp()
+
+                        if king == "dodge":
+                                print("He completely misses and you get a nice clean swing.")
+                                time.sleep(3)
+                                print("The king has fallen and the gem drops out of his hand.")
+                                time.sleep(3)
+                                print("Its the FEUL GEM!")
+                                time.sleep(3)
+                                print("Andrew calls, and wants you back as soon as you can.")
+                                time.sleep(3)
+                                print("He puts it back into the control panel.")
+                                time.sleep(3)
+                                print("A new area has appeared on your map!")
+                                time.sleep(3)
+                                print("Okay, head out as soon as you can after you get some sleep.")
+                                ()
+                                            
+
+
+
+                                    
                     
-    
-    
+                    
+                        
+                                            
 start()
